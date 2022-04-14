@@ -1,0 +1,645 @@
+:root {
+  --primary: #9FB3C8;
+  --primary-dark: #334E68;
+  --white: #F0F4F8;
+  --white-dark: #D9E2EC;
+  --footer: #334E68;
+  --footer-dark: #243B53;
+}
+
+* {
+  margin: 0;
+  width: 100%;
+}
+
+html {
+  font-family: 'Nunito Sans','Segoe UI','Helvetica Neue',Helvetica,Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans',sans-serif;
+}
+
+body {
+  background: var(--white);
+  overflow-x: hidden;
+  animation-name: intro-body;
+  animation-duration: 3s;
+}
+
+@keyframes intro-body {
+  0% {
+    overflow-y: hidden;
+  }
+  100% {
+    overflow-y: hidden;
+  }
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.copied {
+  position: fixed;
+  z-index: 110;
+  background: rgba(0, 0, 0, .7);
+  display: inline-block;
+  width: 100%;
+  height: 100vh;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s;
+}
+
+.card {
+  display: block;
+  position: absolute;
+  width: 220px;
+  text-align: center;
+  border-radius: 6px;
+  background: var(--white);
+  left: 42%;
+  top: 38vh;
+  z-index: 111;
+  padding-top: 25px;
+  opacity: 1;
+  transition: all .3s;
+}
+
+.card > h1 {
+  font-size: 19px;
+  color: var(--primary-dark);
+}
+
+.card > h2 {
+  font-size: 15px;
+  position: relative;
+  font-weight: 400;
+  color: var(--primary-dark);
+  top: 20px;
+}
+
+.card > .close {
+  position: relative;
+  display: block;
+  background: var(--white-dark);
+  top: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.card > .close .btn {
+  width: 100px;
+  padding: 5px;
+}
+
+.card > .close .btn:hover {
+  border-bottom: 3px solid rgba(0,0,0,0.2);
+  top: 0px;
+}
+
+.header {
+  display: inline-block;
+  height: 420px;
+  background: linear-gradient(0deg, rgba(130,154,177,0.8), rgba(130,154,177,0.8)),url(https://i.imgur.com/ZWtKcXS.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header > .logo {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  top: 125px;
+  z-index: 100;
+  height: 50%;
+  text-align: center;
+  visibility: visible;
+  animation-name: intro_due;
+  animation-duration: 3s;
+}
+
+@keyframes intro_due {
+  0% {
+    visibility: hidden;
+  }
+  99.9% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+.logo_due {
+  display: inline-block;
+  width: 100%;
+  position: fixed;
+  top: 125px;
+  z-index: 100;
+  height: 50px;
+  text-align: center;
+  visibility: hidden;
+  animation-name: intro;
+  animation-duration: 3s;
+}
+
+.logo_due img {
+  position: relative;
+  width: 375px;
+}
+
+@keyframes intro {
+  0% {
+    top: 27vh;
+    visibility: visible;
+  }
+  50% {
+    top: 27vh;
+    visibility: visible;
+  }
+  100% {
+    top: 125px;
+    visibility: visible;
+  }
+}
+
+.wrapper {
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.header > .logo img {
+  width: 375px;
+}
+
+@keyframes fade-to-top-ip {
+  0% {
+    opacity: 0;
+    top: -20px;
+  }
+  100% {
+    opacity: 1;
+    top: -115px;
+  }
+}
+
+.header > .ip h2, p {
+  color: var(--white);
+}
+
+.header .ip:hover + .header .ip h2 {
+  color: var(--white-dark);
+}
+
+.header > .ip {
+  position: relative;
+  left: 13%;
+  cursor: pointer;
+  width: 150px;
+  top: -113px;
+  z-index: 102;
+  animation-name: fade-to-top-ip;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
+}
+
+.header > .ip h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
+.header > .ip p {
+  margin-left: 5px;
+  color: var(--white-dark);
+  font-size: 14px;
+  font-weight: 400;
+  width: 1500px;
+  margin-top: 2px;
+}
+
+.header > .ip .image {
+  margin-left: 167px;
+  top: -43.6px;
+  position: relative;
+}
+
+.header > .ip:hover {
+  color: var(--primary-dark)
+}
+
+.header > .ts {
+  position: relative;
+  top: -203px;
+  margin-left: 56.2%;
+  cursor: pointer;
+  z-index: 101;
+  animation-name: fade-to-top-ts;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
+}
+
+@keyframes fade-to-top-ts {
+  0% {
+    opacity: 0;
+    top: -120px;
+  }
+  100% {
+    opacity: 1;
+    top: -200px;
+  }
+}
+
+.header > .ts h2, p {
+  color: var(--white);
+}
+
+.header > .ts {
+  position: relative;
+  left: 17%;
+}
+
+.header > .ts h2 {
+  font-weight: 800;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.header > .ts p {
+  color: var(--white-dark);
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+.header > .ts .image {
+  margin-left: -50px;
+  top: -40.5px;
+  position: relative;
+}
+
+.curve-container {
+  fill: var(--white);
+  margin-top: 10px;
+}
+
+.curve-container .curve {
+    width: 100%;
+    transform: scale(1.3);
+    transform-origin: top;
+}
+
+.content {
+  text-align: center;
+  position: relative;
+  top: 13%;
+}
+
+.nav {
+  position: relative;
+  top: -2vh;
+  overflow-x: hidden;
+  animation-name: fade-to-bottom-nav;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
+}
+
+@keyframes fade-to-bottom-nav {
+  0% {
+    opacity: 0;
+    top: -5vh;
+  }
+  100% {
+    opacity: 1;
+    top: -2vh;
+  }
+}
+
+.btn {
+  display: inline-block;
+  width: 150px;
+  padding: 15px;
+  border-radius: 42px;
+  background: var(--primary);
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--white);
+  border: none;
+  border-bottom: 3px solid rgba(0,0,0,0.2);
+  cursor: pointer;
+  position: relative;
+}
+
+.btn:hover {
+  border-bottom: none;
+  top: 3px;
+}
+
+input {
+  opacity: 0;
+}
+
+.footer {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  height: 20vh;
+  top: 25vh;
+  z-index: 102;
+  animation-name: fade-in-footer;
+  animation-duration: 3s;
+}
+
+@keyframes fade-in-footer {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.top-content {
+  background: var(--footer);
+  display: inline-block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.left {
+  width: 50%;
+  float: left;
+  position: relative;
+  left: 10%;
+}
+
+.right {
+  width: 50%;
+  float: right;
+}
+
+.footer > .top-content > .left > .main {
+  color: #BCCCDC;
+  font-size: 15px;
+}
+
+.footer button {
+  text-decoration: none;
+  cursor: pointer;
+  border: 0px solid transparent;
+  font-size: 14px;
+  padding-top: 6px;
+  padding-right: 18px;
+  padding-bottom: 6px;
+  padding-left: 18px;
+  border-top-left-radius: 32px 100%;
+  border-top-right-radius: 32px 100%;
+  border-bottom-right-radius: 32px 100%;
+  border-bottom-left-radius: 32px 100%;
+  text-align: center;
+  min-width: 40px;
+  width: 125px;
+  box-shadow: 0 -3px 0 rgba(0,0,0,0.1) inset;
+  margin-left: 10px;
+  background: #243B53;
+  color: #BCCCDC;
+}
+
+.footer p {
+  color: #829AB1;
+  font-size: 14px;
+  margin-top: 7px;
+}
+
+.footer > .top-content > .right > .logo img {
+  width: 110px;
+  filter: grayscale(1);
+  opacity: .2;
+  transition: all .4s;
+  cursor: pointer;
+}
+
+.footer img {
+  width: 110px;
+  cursor: pointer;
+}
+
+.footer > .top-content > .right > .logo {
+  position: relative;
+  left: 62.5%;
+}
+
+.footer > .lower-content {
+  display: inline-block;
+  width: 100%;
+  height: 2.5vh;
+  top: -15px;
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: var(--footer-dark);
+}
+
+.footer > .lower-content > .right h2 {
+  font-size: 15px;
+  color: #9FB3C8;
+  font-weight: 800;
+  position: relative;
+  float: right;
+  left: 69.5%;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 2000px) {
+
+  .header > .ip {
+    left: 32%;
+  }
+  .header > .ts {
+    position: relative;
+    left: 7%;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+   .header {
+   	  height: 445px;
+   }
+   .curve-container .curve {
+      width: 100%;
+      transform: scale(1.5);
+      transform-origin: top;
+      margin-top: 2.5px;
+  }
+
+ .header > .ip {
+    left: 24.5%;
+  }
+  .header > .ts {
+    position: relative;
+    left: 11%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .header > .ip {
+    visibility: hidden;
+  }
+
+  .header > .ts {
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 767px) {
+  .card {
+    left: 27%;
+  }
+  .card > .close .btn {
+    left: 26%;
+    top: -5px;
+  }
+  .card > .close .btn:hover {
+    left: 26%;
+    top: -8px;
+  }
+
+  .header {
+    height: 90vh;
+  }
+  .header > .logo {
+    top: 5vh;
+    visibility: visible;
+    animation-name: intro;
+    animation-duration: 3s;
+  }
+
+  .logo_due {
+    visibility: hidden;
+  }
+  @keyframes intro {
+    0% {
+      top: 27vh;
+      visibility: visible;
+    }
+    50% {
+      top: 27vh;
+      visibility: visible;
+    }
+    100% {
+      top: 5vh;
+      visibility: visible;
+    }
+  }
+  .header > .ip {
+    visibility: visible;
+    left: 25%;
+    top: 4vh;
+    animation-name: fade-to-top-ip;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
+  }
+  @keyframes fade-to-top-ip {
+    0% {
+      opacity: 0;
+      top: -4vh;
+    }
+    100% {
+      opacity: 1;
+      top: 4vh;
+    }
+  }
+  .header > .ts {
+    visibility: visible;
+    left: -20%;
+    top: 2vh;
+    animation-name: fade-to-top-ts;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
+  }
+  @keyframes fade-to-top-ts {
+    0% {
+      opacity: 0;
+      top: 8vh;
+    }
+    100% {
+      opacity: 1;
+      top: 2vh;
+    }
+  }
+  .header > .ts h2 {
+    left: -2%;
+    top: 5px;
+    position: relative;
+  }
+  .header > .ts p {
+    left: -2%;
+    top: 5px;
+    position: relative;
+    font-size: 14px;
+  }
+
+  .curve-container {
+    top: -16vh;
+    visibility: hidden;
+  }
+
+  .content {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    top: 15vh;
+  }
+  .nav {
+    top: -10vh;
+    margin: 0 auto;
+    width: 150px;
+    animation-name: fade-to-nav;
+    animation-duration: 1.5s;
+    animation-delay: 1.6s;
+  }
+  @keyframes fade-to-nav {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .btn {
+    display: block;
+    margin-top: 15px;
+  }
+  .btn:hover {
+    margin-top: 18px;
+  }
+
+  .footer > .top-content > .right {
+    visibility: hidden;
+    display: none;
+  }
+  .footer > .top-content > .left {
+    width: 80%;
+  }
+  .top-content {
+    padding-bottom: 30px;
+  }
+}
